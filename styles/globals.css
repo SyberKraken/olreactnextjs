@@ -24,3 +24,61 @@ a {
     background: black;
   }
 }
+
+.megaWrapper{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.floatingMenuWrapper{
+  position:fixed;
+  bottom: 0;
+  margin-bottom: 2vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 2rem;
+  padding-bottom: 2rem ;
+  height: fit-content;
+  width: 40vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  background-color: rgba(92, 133, 119, 0.616);
+  border-radius: 5px;
+}
+
+
+.circleButton{
+  aspect-ratio: 1 / 1;
+  width: 7rem;
+  min-width: 50px;
+  height: fit-content;
+  border-radius: 500px;
+  background-color: rgb(59, 87, 87);
+  margin-right: 17.5%;
+}
+
+
+.circleButton:nth-child(3){
+  margin-right: 0;
+}
+
+.returnToMenu{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2vh;
+  aspect-ratio: 3/1;
+  width: 7rem;
+  height: fit-content;
+  background-color: rgb(87, 59, 59);
+  border-radius: 10px;
+}
+.hidden{
+	display: none;
+}
+
+.belowScreen{
+  transform: translateY(20rem);
+}
