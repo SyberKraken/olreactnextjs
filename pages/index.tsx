@@ -1,6 +1,6 @@
  import Head from 'next/head'
 import Image from 'next/image'
-import FloatingMenu from './floatingMenu'
+import FloatingMenu from '../components/floatingMenu'
 
 export default function Home() {
   return (

@@ -47,6 +47,7 @@ a {
   padding-right: 2vw;
   background-color: rgba(92, 133, 119, 0.616);
   border-radius: 5px;
+  transition: transform 200ms cubic-bezier(.05,.43,.25,.95);
 }
 
 
@@ -66,7 +67,7 @@ a {
 }
 
 .returnToMenu{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   margin-bottom: 2vh;
   aspect-ratio: 3/1;
@@ -74,11 +75,76 @@ a {
   height: fit-content;
   background-color: rgb(87, 59, 59);
   border-radius: 10px;
+  transition: transform 100ms cubic-bezier(.05,.43,.25,.95);
 }
+
+
+
+
+.survWrapper{
+  position: fixed;
+  left: 0;
+  height: fit-content;
+  width: 25rem;
+  background-color: rgba(92, 133, 119, 0.616);
+  border-radius: 5px;
+  margin-left: 1vw;
+  transition: transform 200ms cubic-bezier(.05,.43,.25,.95);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.survWrapper h1{
+  text-align: center;
+}
+
+.dropDown{
+  width: 80%;
+  margin-left: 10%;
+  height: 2rem;
+  text-align: center;
+  font-family: consolas;
+  border: none;
+  border-radius: 5px;
+}
+
+.select option{
+  text-align: center;
+}
+
+
+.sliderWrapper{
+  transition: transform 100ms cubic-bezier(.05,.43,.25,.95);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.sliderWrapper label{
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  
+  
+  
+
+}
+.sliderWrapper input{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.belowScreen{
+  transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+  transform: translateY(20rem);
+}
+
+.leftOfScreen{
+  transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+  transform: translateX(-40rem)
+}
+
 .hidden{
 	display: none;
 }
 
-.belowScreen{
-  transform: translateY(20rem);
-}
