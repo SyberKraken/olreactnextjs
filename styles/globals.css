@@ -89,10 +89,12 @@ a {
   background-color: rgba(92, 133, 119, 0.616);
   border-radius: 5px;
   margin-left: 1vw;
+  margin-top: 2vh;
   transition: transform 200ms cubic-bezier(.05,.43,.25,.95);
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 5vh;
 }
 
 .survWrapper h1{
@@ -103,6 +105,7 @@ a {
   width: 80%;
   margin-left: 10%;
   height: 2rem;
+  font-size: 1.2rem;
   text-align: center;
   font-family: consolas;
   border: none;
@@ -147,4 +150,52 @@ a {
 .hidden{
 	display: none;
 }
+.latlonInput{
+  width: 80%;
+  margin-left: 10%;
+  display: inline-block;
+}
+.latlonInput input{
+  width:50%;
+  margin-top: 0;
+  aspect-ratio: 5/1;
+}
 
+.latlonInput p{
+  width:50%;
+  float: left;
+  text-align: center;
+  margin: 0;
+  margin-top: 2vh;
+}
+
+.orderButton{
+  aspect-ratio: 8/1;
+  margin-top: 5vh;
+  margin-left: 10%;
+  width: 80%;
+}
+
+.areyoushure{
+  aspect-ratio: 16/9;
+  width: 10%;
+  min-width: 200px;
+  position: fixed;
+  display: flexbox;
+  top: 30%;
+  left: 45%;
+  border-radius: 10px;
+  padding-bottom: 1rem;
+  background-color: rgba(92, 133, 119, 0.616);
+}
+
+.areyoushure h3{
+  text-align: center;
+}
+
+.areyoushure button{
+  aspect-ratio: 16/9;
+  width: 40%;
+  margin-left: 5%;
+  
+}

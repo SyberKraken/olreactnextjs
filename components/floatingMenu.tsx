@@ -1,6 +1,6 @@
 import { useState } from "react"
 import SurverilenceMenu from "./surveilenceMenu"
-import {stateStringManipulatorFactory, addStringToConst, removeStringFromConst} from "./stateManipulators"
+import {stateStringManipulatorFactory, addStringToConst, removeStringFromConst, dualStringManipulatorFactory} from "./stateManipulators"
 
 export default function FloatingMenu() {
   const [menuClassString, setMenuClassString ] = useState("floatingMenuWrapper")
@@ -8,14 +8,12 @@ export default function FloatingMenu() {
   const [surveilenceMenuWrapperClassString, setsurveilenceMenuWrapperClassString] = useState("survWrapper leftOfScreen")
   const [payloadMenuWrapperClassString, setpayloadMenuWrapperClassString] = useState("payloadWrapper leftOfScreen")
   const [maintinenceMenuWrapperClassString, setmaintinenceMenuWrapperClassString] = useState("maintinenceWrapper leftOfScreen")
+  const [confirmationClassString, setconfirmationClassString] = useState("areyoushure hidden")
 
-
-  let hidemenu = stateStringManipulatorFactory(addStringToConst, menuClassString, setMenuClassString, "belowScreen")
-  let showmenu = stateStringManipulatorFactory(removeStringFromConst, menuClassString, setMenuClassString, "belowScreen")
-  let hidereturn = stateStringManipulatorFactory(addStringToConst, returnButtonClassString, setreturnButtonClassString, "belowScreen")
-  let showreturn = stateStringManipulatorFactory(removeStringFromConst, returnButtonClassString, setreturnButtonClassString, "belowScreen")
-  let hideSurveilence = stateStringManipulatorFactory(addStringToConst, surveilenceMenuWrapperClassString, setsurveilenceMenuWrapperClassString, "leftOfScreen")
-  let showSurveilence = stateStringManipulatorFactory(removeStringFromConst, surveilenceMenuWrapperClassString, setsurveilenceMenuWrapperClassString, "leftOfScreen")
+  let [hidemenu, showmenu] = dualStringManipulatorFactory( menuClassString, setMenuClassString, "belowScreen")
+  let [hidereturn, showreturn] = dualStringManipulatorFactory(returnButtonClassString, setreturnButtonClassString, "belowScreen")
+  let [hideSurveilence, showSurveilence] = dualStringManipulatorFactory(surveilenceMenuWrapperClassString, setsurveilenceMenuWrapperClassString, "leftOfScreen")
+  let [hideSure, showSure] = dualStringManipulatorFactory(confirmationClassString, setconfirmationClassString, "hidden")
   let menuToggle = ()=>{hidemenu();showreturn()}
   
   return (
@@ -33,7 +31,14 @@ export default function FloatingMenu() {
       }
     }}>return</button>
 
-    <SurverilenceMenu wrapperClasses={ surveilenceMenuWrapperClassString }></SurverilenceMenu>
+    <SurverilenceMenu wrapperClasses={ surveilenceMenuWrapperClassString} showConfirmationButton={()=>showSure()}></SurverilenceMenu>
+    
+    
+      <div className={confirmationClassString}>
+                  <h3>Review order details</h3>
+                  <button>ok</button>
+                  <button onClick={()=> hideSure()}>cancel</button>
+      </div>
     </>
   )
 }
