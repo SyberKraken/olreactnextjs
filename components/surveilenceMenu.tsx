@@ -1,5 +1,5 @@
 import { ChangeEvent, use, useState } from "react"
-import { addStringToConst, dualStringManipulatorFactory, stateStringManipulatorFactory } from "./stateManipulators"
+import { addStringToConst, dualStringManipulatorFactory, stateStringManipulatorFactory } from "../util/stateManipulators"
 
 
 interface surveilenceMenuProps{

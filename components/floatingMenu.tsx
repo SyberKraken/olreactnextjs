@@ -1,6 +1,7 @@
 import { useState } from "react"
 import SurverilenceMenu from "./surveilenceMenu"
-import {stateStringManipulatorFactory, addStringToConst, removeStringFromConst, dualStringManipulatorFactory} from "./stateManipulators"
+import {stateStringManipulatorFactory, addStringToConst, removeStringFromConst, dualStringManipulatorFactory} from "../util/stateManipulators"
+import MapWrapper from "./mapwrapper"
 
 export default function FloatingMenu() {
   const [menuClassString, setMenuClassString ] = useState("floatingMenuWrapper")
@@ -39,6 +40,7 @@ export default function FloatingMenu() {
                   <button>ok</button>
                   <button onClick={()=> hideSure()}>cancel</button>
       </div>
+     <MapWrapper></MapWrapper>
     </>
   )
 }
