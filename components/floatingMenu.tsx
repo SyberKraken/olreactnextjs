@@ -27,8 +27,10 @@ export default function FloatingMenu() {
     </div>
     <button className={returnButtonClassString} onClick={()=>{
       hidereturn()
-      hideSurveilence()
       showmenu()
+      if(! surveilenceMenuWrapperClassString.includes("leftOfScreen")){
+        hideSurveilence()
+      }
     }}>return</button>
 
     <SurverilenceMenu wrapperClasses={ surveilenceMenuWrapperClassString }></SurverilenceMenu>
