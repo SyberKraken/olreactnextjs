@@ -34,7 +34,9 @@ a {
 
 .floatingMenuWrapper{
   position:fixed;
-  bottom: 0;
+  left: 0;
+  margin-left: 2rem;
+  margin-top: 4rem;
   margin-bottom: 2vh;
   display: flex;
   justify-content: center;
@@ -42,10 +44,9 @@ a {
   padding-top: 2rem;
   padding-bottom: 2rem ;
   height: fit-content;
-  width: 40vw;
   padding-left: 2vw;
   padding-right: 2vw;
-  background-color: rgba(92, 133, 119, 0.616);
+  background-color: rgba(78, 78, 78, 0.699);
   border-radius: 5px;
   transition: transform 200ms cubic-bezier(.05,.43,.25,.95);
 }
@@ -68,11 +69,12 @@ a {
 
 .returnToMenu{
   position: fixed;
-  bottom: 0;
-  margin-bottom: 2vh;
+  left: 0;
+  margin-left: 2rem;
+  margin-top: 4.4rem;
   aspect-ratio: 3/1;
-  width: 7rem;
-  height: fit-content;
+  width: 25rem;
+  height: 3rem;
   background-color: rgb(87, 59, 59);
   border-radius: 10px;
   transition: transform 100ms cubic-bezier(.05,.43,.25,.95);
@@ -88,8 +90,8 @@ a {
   width: 25rem;
   background-color: rgba(92, 133, 119, 0.616);
   border-radius: 5px;
-  margin-left: 1vw;
-  margin-top: 2vh;
+  margin-left: 2rem;
+  margin-top: 8rem;
   transition: transform 200ms cubic-bezier(.05,.43,.25,.95);
   display: flex;
   justify-content: center;
@@ -137,19 +139,8 @@ a {
   margin-left: 10%;
 }
 
-.belowScreen{
-  transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
-  transform: translateY(20rem);
-}
 
-.leftOfScreen{
-  transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
-  transform: translateX(-40rem)
-}
 
-.hidden{
-	display: none;
-}
 .latlonInput{
   width: 80%;
   margin-left: 10%;
@@ -177,15 +168,18 @@ a {
 }
 
 .areyoushure{
-  aspect-ratio: 16/9;
-  width: 10%;
+  width: 14rem;
   min-width: 200px;
+  height: fit-content ;
+  min-height: 200px;
   position: fixed;
-  display: flexbox;
-  top: 30%;
-  left: 45%;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  margin-left: 30rem;
+  margin-top: 15rem;
   border-radius: 10px;
-  padding-bottom: 1rem;
   background-color: rgba(92, 133, 119, 0.616);
 }
 
@@ -195,7 +189,33 @@ a {
 
 .areyoushure button{
   aspect-ratio: 16/9;
-  width: 40%;
-  margin-left: 5%;
-  
+  width: 60%;
+  height: 3rem;
+  margin-left: 20%;
+  margin-bottom: 10%;
+}
+
+.mapWrapper{
+  width: "100%";
+  height: "360px"
+}
+
+
+
+
+
+
+.belowScreen{
+  transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+  transform: translateY(-15rem);
+}
+
+.leftOfScreen{
+  transition: transform 400ms cubic-bezier(.05,.43,.25,.95);
+  transform: translateX(-40rem)
+}
+
+
+.hidden{
+	display: none;
 }

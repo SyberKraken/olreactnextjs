@@ -32,15 +32,12 @@ export default function FloatingMenu() {
       }
     }}>return</button>
 
-    <SurverilenceMenu wrapperClasses={ surveilenceMenuWrapperClassString} showConfirmationButton={()=>showSure()}></SurverilenceMenu>
-    
-    
-      <div className={confirmationClassString}>
-                  <h3>Review order details</h3>
-                  <button>ok</button>
-                  <button onClick={()=> hideSure()}>cancel</button>
-      </div>
-     <MapWrapper></MapWrapper>
+    <SurverilenceMenu wrapperClasses={ surveilenceMenuWrapperClassString} showConfirmationButton={()=>showSure()}></SurverilenceMenu>  
+    <div className={confirmationClassString}>
+                <h3>Review order details</h3>
+                <button>ok</button>
+                <button onClick={()=> hideSure()}>cancel</button>
+    </div>
     </>
   )
 }
