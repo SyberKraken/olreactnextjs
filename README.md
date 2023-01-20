@@ -1,1 +1,2 @@
-Atempt to implement apenlayes with react and nextj styled with css
+Implementation of openlayers in react and nextjs with a dynamic menu
+(unfinished)
